@@ -1,6 +1,6 @@
 # OpenClassrooms: Projet 10 - Créez une API sécurisée RESTful en utilisant Django REST.
 
-Ce programme a été développé dans le cadre du projet 11 d'OpenClassrooms. 
+Ce programme a été développé dans le cadre du projet 10 d'OpenClassrooms. 
 
 
 ![Projet 10 OpenClassrooms Güdlft](.readme/landry_anthony_P10_softdesk_openclassrooms_developpeur_application_python.png)
