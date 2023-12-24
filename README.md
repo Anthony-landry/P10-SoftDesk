@@ -17,7 +17,7 @@ Ensuite, suivez ces étapes pour installer et exécuter le programme :
     git clone https://github.com/Anthony-landry/P10-SoftDesk.git
     ```
     
-- [x] 2. Accédez au dossier P4-ChessTournaments.
+- [x] 2. Accédez au dossier P10-SoftDesk.
     
 - [x] 3. Créez un nouvel environnement virtuel en utilisant la commande suivante :
     
