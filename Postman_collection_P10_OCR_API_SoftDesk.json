@@ -1,0 +1,1518 @@
+{
+	"info": {
+		"_postman_id": "14c6e822-f7b5-4404-9f50-df6f6f021d40",
+		"name": "P10_OCR_API_SoftDesk",
+		"description": "Cette API est développée pour la gestion et le suivi de projets\n\nPar sécurité, seuls les utilisateurs authentitfiés via un token peuvent accéder aux points de terminaison.\n\nChaque sous collection est documentée.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21779744"
+	},
+	"item": [
+		{
+			"name": "A - Authentification",
+			"item": [
+				{
+					"name": "Create User / Signup (Anthony)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "anthony",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								},
+								{
+									"key": "can_be_contacted",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "can_be_shared",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"signup",
+								""
+							]
+						},
+						"description": "# User Signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User / Signup (Hugo)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "hugo",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								},
+								{
+									"key": "can_be_contacted",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "can_be_shared",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"signup",
+								""
+							]
+						},
+						"description": "# User Signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User / Signup (Arnaud)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "arnaud",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								},
+								{
+									"key": "can_be_contacted",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "can_be_shared",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"signup",
+								""
+							]
+						},
+						"description": "# User Signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User / Signup (Arnaud) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Arnaud",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								},
+								{
+									"key": "can_be_contacted",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "can_be_shared",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"signup",
+								""
+							]
+						},
+						"description": "# User Signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Auth User / Login (Anthony)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    pm.environment.set(\"authToken\", pm.response.json().tokens[\"access\"])",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "anthony",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "# User Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Auth User / Login (Hugo)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    pm.environment.set(\"authToken\", pm.response.json().tokens[\"access\"])",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "hugo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "# User Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Auth User / Login (Arnaud)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    pm.environment.set(\"authToken\", pm.response.json().tokens[\"access\"])",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "arnaud",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abcd.1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "# User Login"
+					},
+					"response": []
+				}
+			],
+			"description": "Ces points de terminaison permettent à tous le monde de s'inscrire (signup)\n\nLes utilisateurs inscrits peuvent ensuite se connecter (login)\n\nCette sous collection contient les requêtes nécessaires pour inscrire et connecter 3 utilisateurs.",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "A.1 - Token",
+			"item": [
+				{
+					"name": "Retrieve Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "toto2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcd.1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "B - Projects",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc3LCJpYXQiOjE3MDI5OTUxNzcsImp0aSI6IjhjYTA4NjUxYzU5NTQxOWNhZmYxNWJhMzBiMzFlZWQ4IiwidXNlcl9pZCI6MTB9.ccHY_gzZIN5Sgu-ilW8P2q6Y8JoSvVARCWuQ9huqHs0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Projet_Hugo_1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "android",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projet/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projet",
+								""
+							]
+						},
+						"description": "# Project creation"
+					},
+					"response": []
+				},
+				{
+					"name": "List Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMTIxNzIzLCJpYXQiOjE3MDMwNjE3MjMsImp0aSI6ImQyOGZmMjJlNmZkMzQyZmZhNTA2ZWQ3MDY0ZjRjNzVhIiwidXNlcl9pZCI6OX0.CqGizcHYcDrXl5XruADRK_bwFnKpy9DC6T31c4D89kM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projet/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projet",
+								""
+							]
+						},
+						"description": "# List of projects"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Project",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyMzI2LCJpYXQiOjE3MDI3MjIzMjYsImp0aSI6IjM2YzRhOGIwY2FmZTRkZWI4N2Q3MGJhMzk3ZmMzM2EwIiwidXNlcl9pZCI6Nn0.cApP7a7aBSUNDrqSGqO_4n2NHP0QKFP87-2IbXSAmSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projet/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projet",
+								"8"
+							]
+						},
+						"description": "# Project detail"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyMzI2LCJpYXQiOjE3MDI3MjIzMjYsImp0aSI6IjM2YzRhOGIwY2FmZTRkZWI4N2Q3MGJhMzk3ZmMzM2EwIiwidXNlcl9pZCI6Nn0.cApP7a7aBSUNDrqSGqO_4n2NHP0QKFP87-2IbXSAmSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Projet_Anthony",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "back",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "présentation de la soutance P10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projet/8/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projet",
+								"8",
+								""
+							]
+						},
+						"description": "# Project update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyMzI2LCJpYXQiOjE3MDI3MjIzMjYsImp0aSI6IjM2YzRhOGIwY2FmZTRkZWI4N2Q3MGJhMzk3ZmMzM2EwIiwidXNlcl9pZCI6Nn0.cApP7a7aBSUNDrqSGqO_4n2NHP0QKFP87-2IbXSAmSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projet/8/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projet",
+								"8",
+								""
+							]
+						},
+						"description": "# Project suppresion"
+					},
+					"response": []
+				}
+			],
+			"description": "Points de terminaison permettant les opérations CRUD pour les Projects.\n\n**Tout le monde** peut :\n\nCréer un Project\n\n**Contributeur ou Auteur** de projets peut :\n\nLister ces Projects  \nVoir le détail de ces Projects\n\n**Auteur** du projet peut :\n\nModifier son Project  \nSupprimer son Projects",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{authToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "C - Contributors",
+			"item": [
+				{
+					"name": "Create Contributor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc0LCJpYXQiOjE3MDI5OTUxNzQsImp0aSI6IjU4MjBjZmIxZWY2NTRjMzNiZjRlMjEyODQ5ZDQ5MjVhIiwidXNlcl9pZCI6OX0.9OWk-MH5StSFwEeicKs6qnSXRRFBStxRcaZECPyEM_E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/contributors/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"contributors",
+								""
+							]
+						},
+						"description": "# Contributor creation"
+					},
+					"response": []
+				},
+				{
+					"name": "List Contributors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc3LCJpYXQiOjE3MDI5OTUxNzcsImp0aSI6IjhjYTA4NjUxYzU5NTQxOWNhZmYxNWJhMzBiMzFlZWQ4IiwidXNlcl9pZCI6MTB9.ccHY_gzZIN5Sgu-ilW8P2q6Y8JoSvVARCWuQ9huqHs0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/contributors/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"contributors",
+								""
+							]
+						},
+						"description": "# Contributor's List"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Contributor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU0NjM1LCJpYXQiOjE3MDI5OTQ2MzUsImp0aSI6IjU3ZWM3MmEzMGE0NjRmZDY4NTdhOWNlMDZkMmJiNGI4IiwidXNlcl9pZCI6N30.u8vjLD-f-FSR1i78yJjtnAmT7ZpceRfyFYou_Guyb38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/contributors/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"contributors",
+								"6"
+							]
+						},
+						"description": "# Contributor detail"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contributor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyMzI2LCJpYXQiOjE3MDI3MjIzMjYsImp0aSI6IjM2YzRhOGIwY2FmZTRkZWI4N2Q3MGJhMzk3ZmMzM2EwIiwidXNlcl9pZCI6Nn0.cApP7a7aBSUNDrqSGqO_4n2NHP0QKFP87-2IbXSAmSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/contributors/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"contributors",
+								"13"
+							]
+						},
+						"description": "# Contributor suppression"
+					},
+					"response": []
+				}
+			],
+			"description": "Points de terminaison pour les Contributors.\n\n**Auteur** du projet peut :\n\nLire la liste des Contributors  \nVoir le détail d'un Contributor  \nCréer un Contributor  \nSupprimer un Contributor",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{authToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "D - Issues",
+			"item": [
+				{
+					"name": "Create Issue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc0LCJpYXQiOjE3MDI5OTUxNzQsImp0aSI6IjU4MjBjZmIxZWY2NTRjMzNiZjRlMjEyODQ5ZDQ5MjVhIiwidXNlcl9pZCI6OX0.9OWk-MH5StSFwEeicKs6qnSXRRFBStxRcaZECPyEM_E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Issue Anthony",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "bug",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "to_do",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue",
+								""
+							]
+						},
+						"description": "# Issue creation"
+					},
+					"response": []
+				},
+				{
+					"name": "List Issues",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMTIxNzIzLCJpYXQiOjE3MDMwNjE3MjMsImp0aSI6ImQyOGZmMjJlNmZkMzQyZmZhNTA2ZWQ3MDY0ZjRjNzVhIiwidXNlcl9pZCI6OX0.CqGizcHYcDrXl5XruADRK_bwFnKpy9DC6T31c4D89kM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue",
+								""
+							]
+						},
+						"description": "# Issue's list"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Issue",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyMzI2LCJpYXQiOjE3MDI3MjIzMjYsImp0aSI6IjM2YzRhOGIwY2FmZTRkZWI4N2Q3MGJhMzk3ZmMzM2EwIiwidXNlcl9pZCI6Nn0.cApP7a7aBSUNDrqSGqO_4n2NHP0QKFP87-2IbXSAmSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue/15/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue",
+								"15",
+								""
+							]
+						},
+						"description": "# Issue detail"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Issue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyNjI5LCJpYXQiOjE3MDI3MjI2MjksImp0aSI6IjA4Mzc1MzYxMDQ4ZjQxN2I4YTkyNzg3YzdlZThkYTY0IiwidXNlcl9pZCI6N30._ObkpMx04pBh9q-aJ1ZfNwtV2_t_rjFWk-GQmXr2XT4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test update 2",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "bug",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "low",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "update de issuue 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue/15/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue",
+								"15",
+								""
+							]
+						},
+						"description": "# Issue update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Issue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzg5NTI1LCJpYXQiOjE3MDI3Mjk1MjUsImp0aSI6IjYwZDMxZDgyNjJlNjRhODU4Y2EwMzg5ZDJiN2NkZWYzIiwidXNlcl9pZCI6N30.cwQ4lxGNJpZyNGiujgiULox4Hi4jlE5j8GOwxnOejnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue/15/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue",
+								"15",
+								""
+							]
+						},
+						"description": "# Issue suppression"
+					},
+					"response": []
+				}
+			],
+			"description": "Points de terminaison permettant les opérations CRUD pour les Issues.\n\n**Contributeur ou Auteur** de projets peut :\n\nCréer une Issue sur ces projets  \nLister les Issues de ces projets  \nVoir le détail d'une Issue de ces projets\n\n**Auteur** de l'Issue peut :\n\nModifier l'Issue  \nSupprimer l'Issue",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{authToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "E - Comments",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMTIyMzMwLCJpYXQiOjE3MDMwNjIzMzAsImp0aSI6ImJhNjczM2I2YTM2ZjQyOWM5NDBlODI2MjRiZTBlZDYxIiwidXNlcl9pZCI6OX0.cbmBPGAtisVfYzmwZwh0uVsUKFLhsWIAuIoaYbBuAQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "comment de Anthony 19122023",
+									"type": "text"
+								},
+								{
+									"key": "issue",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								""
+							]
+						},
+						"description": "# Comment creation"
+					},
+					"response": []
+				},
+				{
+					"name": "List Comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzk0MzEwLCJpYXQiOjE3MDEzMzQzMTAsImp0aSI6IjNiMDk3NDI0ODc4ODQ1MTY4YWVmMTg3MGIxYTk2NTM3IiwidXNlcl9pZCI6MX0.Wdfkr51sZ-EGdJ8n2bgiU6MSXgyXu5Lc_ZU5oK586Jk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								""
+							]
+						},
+						"description": "# Comment's list"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzk0MzEwLCJpYXQiOjE3MDEzMzQzMTAsImp0aSI6IjNiMDk3NDI0ODc4ODQ1MTY4YWVmMTg3MGIxYTk2NTM3IiwidXNlcl9pZCI6MX0.Wdfkr51sZ-EGdJ8n2bgiU6MSXgyXu5Lc_ZU5oK586Jk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comment/c7e39334-7e1f-4ed2-9498-e4d9d2ab4bbe/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"c7e39334-7e1f-4ed2-9498-e4d9d2ab4bbe",
+								""
+							]
+						},
+						"description": "# Comment detail"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzk0MzEwLCJpYXQiOjE3MDEzMzQzMTAsImp0aSI6IjNiMDk3NDI0ODc4ODQ1MTY4YWVmMTg3MGIxYTk2NTM3IiwidXNlcl9pZCI6MX0.Wdfkr51sZ-EGdJ8n2bgiU6MSXgyXu5Lc_ZU5oK586Jk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "modification par toto1",
+									"type": "text"
+								},
+								{
+									"key": "issue",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comment/c7e39334-7e1f-4ed2-9498-e4d9d2ab4bbe/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"c7e39334-7e1f-4ed2-9498-e4d9d2ab4bbe",
+								""
+							]
+						},
+						"description": "# Comment update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxMzk0MzM1LCJpYXQiOjE3MDEzMzQzMzUsImp0aSI6Ijg5OTFlNmQyYWU3ZjRmOGJhZGUyYzBlOWVhMTRkY2FjIiwidXNlcl9pZCI6Mn0.butTFXwynd9XjpxWa661i5DRZwh7X5cVm6knSe5T0Eo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comment/b1dc924c-694c-43fe-85c3-62cdc4e61e41/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"b1dc924c-694c-43fe-85c3-62cdc4e61e41",
+								""
+							]
+						},
+						"description": "# Comment suppression"
+					},
+					"response": []
+				}
+			],
+			"description": "Points de terminaison permettant les opérations CRUD pour les Issues.\n\n**Contributeur ou Auteur** de projets peut :\n\nCréer un Comment sur ces projets  \nLister les Comments de ces projets  \nVoir le détail d'un Comment de ces projets\n\n**Auteur** du projet peut :\n\nModifier un Comment de ce projet  \nSupprimer un Comment de ce projet",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{authToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/"
+		}
+	]
+}
