@@ -44,13 +44,14 @@ class Issue(models.Model):
         related_query_name='issue_author',
         null=True
     )
-    # assignee = models.ForeignKey(
-    #     to=settings.AUTH_USER_MODEL,
-    #     on_delete=models.CASCADE,
-    #     related_name='issue_assignee',
-    #     related_query_name='issue_assignee',
-    #     blank=True
-    # )
+    assignee = models.ForeignKey(
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='issue_assignee',
+        related_query_name='issue_assignee',
+        blank=True,
+        null=True
+    )
     created_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
