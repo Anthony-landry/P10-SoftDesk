@@ -44,14 +44,19 @@ Ensuite, suivez ces étapes pour installer et exécuter le programme :
     ```bash
     pip install -r requirements.txt
     ```
+- [x] 6. placez vous à la racine du projet (là ou se trouve le fichier manage.py), puis effectuez les migrations :
     
-- [x] 6. Faire les migrations :
+    ```bash
+    python manage.py makemigrations
+    ```
+    
+- [x] 7. Faire les migrations :
     
     ```bash
     python manage.py migrate
     ```
 
-- [x] 7. Si la database est vide créer un SuperUser pour accder à la partie administatrion de django :
+- [x] 8. Si la database est vide créer un SuperUser pour accder à la partie administatrion de django :
     
     ```bash
     python manage.py createsuperuser
@@ -62,7 +67,7 @@ Ensuite, suivez ces étapes pour installer et exécuter le programme :
     python manage.py changepassword admin
     ```
 
-- [x] 8.Remplir le fichier .env :
+- [x] 9.Remplir le fichier .env :
 
 un fichier .env ce trouve à la racine du pojet
 
@@ -76,7 +81,7 @@ ALGORITHM="HS256"
 
     par défaut id : admin / password : Abcd.1234!
 
-- [x] 9. Lancer le serveur :
+- [x] 10. Lancer le serveur :
     
     ```bash
     python manage.py runserver 
