@@ -7,7 +7,7 @@ class IsProjectOwner(permissions.BasePermission):
     def has_permission(self, request, view):
         id_project = request.data.get('project')
         if id_project != None:
-            project = Project.objects.get(id=int(id_project[0]))
+            project = Project.objects.get(id=int(id_project))
             if request.user == project.author:
                 return True
             return False

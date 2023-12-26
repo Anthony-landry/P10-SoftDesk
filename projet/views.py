@@ -77,7 +77,7 @@ class IssueViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
 
         id_project = request.data.get('project')
-        project = Project.objects.get(id=int(id_project[0]))
+        project = Project.objects.get(id=int(id_project))
         if request.user == project.author or len(Contributor.objects.filter(project=project, user=request.user)) != 0:
 
             self.perform_create(serializer)
