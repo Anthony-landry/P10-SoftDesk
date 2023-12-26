@@ -179,7 +179,7 @@
 					"response": []
 				},
 				{
-					"name": "Create User / Signup (Arnaud) Copy",
+					"name": "Create User / Signup (Louis)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -188,7 +188,7 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "Arnaud",
+									"value": "martin",
 									"type": "text"
 								},
 								{
@@ -241,9 +241,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"if (pm.response.code === 200) {",
-									"    pm.environment.set(\"authToken\", pm.response.json().tokens[\"access\"])",
-									"}",
 									""
 								],
 								"type": "text/javascript"
@@ -435,12 +432,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "toto2",
+									"value": "martin",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "abcd.1234",
+									"value": "Abcd.1234",
 									"type": "text"
 								}
 							]
@@ -477,7 +474,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc3LCJpYXQiOjE3MDI5OTUxNzcsImp0aSI6IjhjYTA4NjUxYzU5NTQxOWNhZmYxNWJhMzBiMzFlZWQ4IiwidXNlcl9pZCI6MTB9.ccHY_gzZIN5Sgu-ilW8P2q6Y8JoSvVARCWuQ9huqHs0",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -489,12 +486,18 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "Projet_Hugo_1",
+									"value": "Projet_martinv2",
 									"type": "text"
 								},
 								{
 									"key": "type",
-									"value": "android",
+									"value": "front",
+									"description": "('back', 'back-end'), ('front', 'front-end'), ('ios', 'iOS'),('android', 'Android')",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "date de projet 27122023",
 									"type": "text"
 								}
 							]
@@ -527,7 +530,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMTIxNzIzLCJpYXQiOjE3MDMwNjE3MjMsImp0aSI6ImQyOGZmMjJlNmZkMzQyZmZhNTA2ZWQ3MDY0ZjRjNzVhIiwidXNlcl9pZCI6OX0.CqGizcHYcDrXl5XruADRK_bwFnKpy9DC6T31c4D89kM",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -616,7 +619,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Projet_Anthony",
+									"value": "Projet_louis",
 									"type": "text"
 								},
 								{
@@ -626,7 +629,7 @@
 								},
 								{
 									"key": "description",
-									"value": "présentation de la soutance P10",
+									"value": "présentation de la soutance P10 du 27122023",
 									"type": "text"
 								}
 							]
@@ -736,7 +739,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc0LCJpYXQiOjE3MDI5OTUxNzQsImp0aSI6IjU4MjBjZmIxZWY2NTRjMzNiZjRlMjEyODQ5ZDQ5MjVhIiwidXNlcl9pZCI6OX0.9OWk-MH5StSFwEeicKs6qnSXRRFBStxRcaZECPyEM_E",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -748,12 +751,12 @@
 							"formdata": [
 								{
 									"key": "user",
-									"value": "9",
+									"value": "10",
 									"type": "text"
 								},
 								{
 									"key": "project",
-									"value": "6",
+									"value": "10",
 									"type": "text"
 								}
 							]
@@ -790,7 +793,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc3LCJpYXQiOjE3MDI5OTUxNzcsImp0aSI6IjhjYTA4NjUxYzU5NTQxOWNhZmYxNWJhMzBiMzFlZWQ4IiwidXNlcl9pZCI6MTB9.ccHY_gzZIN5Sgu-ilW8P2q6Y8JoSvVARCWuQ9huqHs0",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -960,7 +963,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMDU1MTc0LCJpYXQiOjE3MDI5OTUxNzQsImp0aSI6IjU4MjBjZmIxZWY2NTRjMzNiZjRlMjEyODQ5ZDQ5MjVhIiwidXNlcl9pZCI6OX0.9OWk-MH5StSFwEeicKs6qnSXRRFBStxRcaZECPyEM_E",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -972,27 +975,40 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Issue Anthony",
+									"value": "Issue martin",
 									"type": "text"
 								},
 								{
 									"key": "tag",
 									"value": "bug",
+									"description": "('bug', 'BUG'), ('feature', 'FEATURE'), ('task', 'TASK')",
 									"type": "text"
 								},
 								{
 									"key": "priority",
 									"value": "high",
+									"description": "('low', 'LOW'), ('medium', 'MEDIUM'), ('high', 'HIGH')",
 									"type": "text"
 								},
 								{
 									"key": "project",
-									"value": "6",
+									"value": "10",
 									"type": "text"
 								},
 								{
 									"key": "status",
 									"value": "to_do",
+									"description": "('to_do', 'To Do'), ('in_progress', ' In Progress'),('finished', 'Finished')], default=\"to_do\")",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "assignee",
+									"value": "11",
 									"type": "text"
 								}
 							]
@@ -1028,7 +1044,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzMTIxNzIzLCJpYXQiOjE3MDMwNjE3MjMsImp0aSI6ImQyOGZmMjJlNmZkMzQyZmZhNTA2ZWQ3MDY0ZjRjNzVhIiwidXNlcl9pZCI6OX0.CqGizcHYcDrXl5XruADRK_bwFnKpy9DC6T31c4D89kM",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg4NDYxLCJpYXQiOjE3MDM2Mjg0NjEsImp0aSI6IjNlN2MzMTU2MTkzYTQzOWM4YzQzY2IxOGU5OGM0ZmZkIiwidXNlcl9pZCI6MTJ9.3XRSWSAjs4a48XWjfsWO6FStRGE5cxzF-nsfe0z_V-4",
 									"type": "string"
 								}
 							]
@@ -1110,7 +1126,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAyNzgyNjI5LCJpYXQiOjE3MDI3MjI2MjksImp0aSI6IjA4Mzc1MzYxMDQ4ZjQxN2I4YTkyNzg3YzdlZThkYTY0IiwidXNlcl9pZCI6N30._ObkpMx04pBh9q-aJ1ZfNwtV2_t_rjFWk-GQmXr2XT4",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNjg3MDc3LCJpYXQiOjE3MDM2MjcwNzcsImp0aSI6IjAzZmQ0YzMyYzFmYjRkNzA5ZWYwZmI5Yzg1ZDdkMzc1IiwidXNlcl9pZCI6OX0.by-w4SO1sUh_L-B5jwjx6KJ6FzK_62OrUzl4-VDvblI",
 									"type": "string"
 								}
 							]
@@ -1137,12 +1153,17 @@
 								},
 								{
 									"key": "project",
-									"value": "3",
+									"value": "10",
 									"type": "text"
 								},
 								{
 									"key": "description",
 									"value": "update de issuue 2",
+									"type": "text"
+								},
+								{
+									"key": "assignee",
+									"value": "9",
 									"type": "text"
 								}
 							]
